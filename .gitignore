@@ -1,0 +1,9 @@
+.env
+*.json
+.venv/
+db/
+crewai-rag-tool.lock
+database
+uploaded_audio/
+uploaded_image/
+__pycache__/
