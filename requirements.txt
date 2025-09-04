@@ -1,0 +1,11 @@
+crewai
+groq
+google-cloud-speech
+pydub
+python-dotenv
+langchain-community
+pypdf
+python-multipart
+pillow
+streamlit
+google-generativeai
