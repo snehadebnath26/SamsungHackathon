@@ -9,7 +9,7 @@ It orchestrates a team of specialized AI agents to diagnose problems, fetch offi
 
 ```mermaid
 flowchart LR
-    A[📷 Equipment Identifier Agent] --> C[📚 Document Search Agent]
+    A[📷 Equipment Identifier Agent] --> B[🎤 Voice Transcriber Agent]
     B[🎤 Voice Transcriber Agent] --> C[📚 Document Search Agent]
 ```
 
