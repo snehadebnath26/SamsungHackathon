@@ -90,7 +90,11 @@ def transcribe_audio(input_file:str)->str:
         sample_rate_hertz=sample_rate_hertz,
         language_code="en-US",
     )
-    client = speech.SpeechClient.from_service_account_file("gcp_key.json")
+    
+    key_path = "gcp_key.json"  # local
+    if os.path.exists("/etc/secrets/gcp_key.json"):
+        key_path = "/etc/secrets/gcp_key.json"
+    client = speech.SpeechClient.from_service_account_file(key_path)
     # Call Google Speech-to-Text API
     response = client.recognize(config=config, audio=audio)
 
