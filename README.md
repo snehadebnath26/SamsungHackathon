@@ -3,7 +3,7 @@
 **Aura** is an AI-powered, multi-agent system designed to act as a **first responder** for high-stakes operational tasks.  
 It orchestrates a team of specialized AI agents to diagnose problems, fetch official procedures, and guide technicians — turning minutes of chaos into seconds of controlled, auditable action.
 
-Try it live at [aura_website](https://aura-assistant-uvqb.onrender.com/)
+Try it live at [aura_website](https://aura-assistant-uvqb.onrender.com/) [it will take quite sometime to load ]
 
 ---
 
