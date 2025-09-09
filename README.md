@@ -1,11 +1,13 @@
-# 🌐 Aura - AI Supervisor for Enterprise Operations 
+# 🌐 Aura - AI Supervisor for Enterprise Operations
 
 **Aura** is an AI-powered, multi-agent system designed to act as a **first responder** for high-stakes operational tasks.  
 It orchestrates a team of specialized AI agents to diagnose problems, fetch official procedures, and guide technicians — turning minutes of chaos into seconds of controlled, auditable action.
 
+Try it live at [aura_website](https://aura-assistant-uvqb.onrender.com/)
+
 ---
 
-## 🚀 How It Works
+## 🚀 How the Agent Network works
 
 ```mermaid
 flowchart LR
@@ -26,6 +28,7 @@ flowchart LR
 - **Groq API** → Equipment identification
 - **Google Cloud Speech-to-Text API** → Voice transcription
 - **Gemini LLM** → Agent reasoning and knowledge
+- **Render** → for deployment
 
 ---
 
@@ -38,6 +41,7 @@ flowchart LR
 ├── agent.py           # Defines AI agents (equipment identifier, transcriber, document searcher)
 ├── api.py             # API layer to orchestrate agent interactions and monitoring
 ├── app.py             # Streamlit frontend application
+├── apt.txt            # system requirements
 ├── config.py          # Configuration, environment variables, and directory setup
 ├── crew.py            # CrewAI setup linking agents and tasks
 ├── output_handler.py  # Real-time output capture and monitoring
@@ -47,7 +51,9 @@ flowchart LR
 ├── tools.py           # Tools for speech recognition, equipment ID, and document search
 ├── utils.py           # Utility functions for validation, logging, and session handling
 ├── requirements.txt   # Python dependencies
-└── presentation/      # Demo video and presentation
+├── database/          # place the operational manuals here
+├── presentation/      # Demo video and presentation
+└── sample/            # sample image
 ```
 
 ---
@@ -60,6 +66,7 @@ flowchart LR
 3. **Gemini API key** → Available via [Google AI Studio](https://aistudio.google.com/).
 4. **ffmpeg** → Required for `pydub` audio processing. Install via package manager (`sudo apt install ffmpeg` or `brew install ffmpeg`).
 5. **GCC version > 9** (for dependencies like `pydub`, `crewai[tools]` etc that rely on system-level libraries).
+6. **Python Version** 3.10.12
 
 ---
 
@@ -77,18 +84,10 @@ source .venv/bin/activate   # On Linux/Mac
 
 # Install dependencies
 pip install -r requirements.txt
-pip install "crewai[tools]"
-
-# Setup database
-mkdir database
-# Place all operational manuals in PDF format inside /database
-
-# Store Google Speech-to-Text JSON credentials
-# Example: gcp_key.json at project root
 
 # Configure environment variables
 cp .env.example .env
-# Edit .env and add your GEMINI_API_KEY, GROQ_API_KEY, and GOOGLE_API_KEY
+# Edit .env and add your GEMINI_API_KEY, GROQ_API_KEY, GOOGLE_API_KEY and GCP_KEY_JSON
 
 # Run the app
 streamlit run app.py
@@ -113,3 +112,4 @@ Feel free to open issues, suggest improvements, or submit pull requests.
 
 📂 **Note**:
 Demo video and presentation are available in the **`presentation/`** folder.
+Sample image can be taken from **`sample/`** folder.
