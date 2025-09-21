@@ -37,7 +37,7 @@ flowchart LR
 ```
 .
 ├── .env.example       # environmental variables
-├── .gitignore
+├── .gitignore         # Ignores unwanted as well as confidential files
 ├── agent.py           # Defines AI agents (equipment identifier, transcriber, document searcher)
 ├── api.py             # API layer to orchestrate agent interactions and monitoring
 ├── app.py             # Streamlit frontend application
@@ -51,8 +51,9 @@ flowchart LR
 ├── tools.py           # Tools for speech recognition, equipment ID, and document search
 ├── utils.py           # Utility functions for validation, logging, and session handling
 ├── requirements.txt   # Python dependencies
+├── RSSR.pdf           # Presentation pdf
 ├── database/          # place the operational manuals here
-├── presentation/      # Demo video and presentation
+├── Submissions/       # Demo video
 └── sample/            # sample image
 ```
 
@@ -111,5 +112,5 @@ Feel free to open issues, suggest improvements, or submit pull requests.
 ---
 
 📂 **Note**:
-Demo video and presentation are available in the **`presentation/`** folder.
+Demo video and presentation are available in the **`Submissions/`** folder.
 Sample image can be taken from **`sample/`** folder.
